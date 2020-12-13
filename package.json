@@ -1,0 +1,27 @@
+{
+  "name": "travis-play",
+  "version": "1.0.0",
+  "description": "playing with travis",
+  "homepage": "https://github.com/ktalebian/travis-play#readme",
+  "bugs": {
+    "url": "https://github.com/ktalebian/travis-play/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ktalebian/travis-play.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prebuild": "rm -rf dist",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.13",
+    "typescript": "^4.1.3"
+  }
+}
