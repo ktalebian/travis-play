@@ -13,19 +13,10 @@ function run_script() {
   fi
 }
 
-echo "//registry.npmjs.org/:email=\${NPM_EMAIL}" >> $HOME/.npmrc 2> /dev/null
-echo "//registry.npmjs.org/:username=\${NPM_USERNAME}" >> $HOME/.npmrc 2> /dev/null
-echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" >> $HOME/.npmrc 2> /dev/null
-echo "printing home"
-echo $HOME
-echo "lsing home"
-ls -al $HOME
-echo "printing whoami"
-npm whoami
-echo $PWD
-echo "printing ls"
-ls -al .
+npm config set registry //registry.npmjs.org
+npm config set _auth "${NPM_TOKEN}"
+
 run_script $LERNA run clean
 run_script npm install --no-package-lock
 run_script npm run build
-run_script $LERNA publish from-git --yes --no-verify-access
+run_script $LERNA publish from-git --yes
