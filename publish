@@ -13,7 +13,10 @@ function run_script() {
   fi
 }
 
+echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" >> $HOME/.npmrc 2> /dev/null
+npm whoami
+ls .
 run_script $LERNA run clean
 run_script npm install --no-package-lock
 run_script npm run build
-run_script $LERNA publish from-git --yes
+run_script $LERNA publish from-git --yes --no-verify-access
