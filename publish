@@ -1,24 +1,71 @@
-#!/bin/bash
+# lerna-it
 
-CWD="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-BIN_DIR="$CWD/node_modules/.bin"
-LERNA="$BIN_DIR/lerna"
+A simple script for publishing Lerna monorepo projects and a CI/CD system such as Travis.
 
-# Runs script but quits if script exists with non-zero exit code
-function run_script() {
-  eval "$@"
-  if [ $? -eq 1 ] ; then
-    echo "Script '$@' failed - exiting"
-    exit $?
-  fi
+## Installation
+Install using
+
+```bash
+# If using npm
+npm install -D @k88/lerna-it
+
+# If using yarn
+yarn add -D @k88/lerna-it
+```
+
+## Usage
+
+Add the following scripts to your package.json\'s `scripts`:
+
+```json
+{
+  "scripts": {
+    "release:alpha": "lerna-release alpha",
+    "release:beta": "lerna-release beta",
+    "release:public": "lerna-release public",
+    "publish": "lerna-publish"
+  }
 }
+```
 
+## Details
 
-npm config set access public
-npm config set registry https://registry.npmjs.org
-npm set //registry.npmjs.org/:_authToken "$NPM_TOKEN"
+The `lerna-release` is intended to run on your local machine; it will create a release tag and push the changes up. 
 
-run_script $LERNA run clean
-run_script npm install --no-package-lock
-run_script npm run build
-run_script $LERNA publish from-git --yes
+Your CI/CD system should be then be triggered to invoke `lerna-publish` which will perform the following tasks:
+
+1) Check publish version (see below for more detail)
+2) Removes all dist/lib/node_modules directory
+3) Performs a fresh `npm install`
+4) Runs `npm run lint`
+5) Runs `npm run test`
+6) Runs `npm run build`
+7) Publishes the packages
+
+### Publish types
+
+This script safeguards performing `public/beta/alpha` publication based on:
+
+* `public` may only run on `main` branch
+* `beta` may only run on `v\d-beta` branch (i.e. `v1-beta`, `v2-beta`, `v3-beta`, etc)
+* `alpha` may only run on non-beta/non-publich branches
+
+### Distribution Tags
+
+The following tags are published:
+
+* The `public` publish pushes a `latest` dist tag
+* The `beta` publish pushes a `beta` dist tag
+* The `alpha` publish pushes a `alpha` dist tag
+
+### Version bump
+
+You can pass an optional `patch/minor/major` argument to change the version bump. By default, a `patch` is published. Some examples are:
+
+```bash
+# Publishes a patch beta
+npm run release:beta
+
+# Publishes a minor public
+npm run release:public minor
+```

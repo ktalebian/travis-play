@@ -21,7 +21,8 @@
     "build": "lerna run build",
     "postinstall": "npm run bootstrap",
     "test": "echo 'no test'",
-    "r": "lerna-release public major",
+    "lint": "echo 'no test'",
+    "r": "lerna-release public patch",
     "p": "lerna-publish"
   },
   "devDependencies": {
