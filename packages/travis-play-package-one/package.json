@@ -14,5 +14,8 @@
     "prebuild": "npm run clean",
     "build": "tsc",
     "clean": "rm -rf dist"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
