@@ -3,8 +3,6 @@
 CWD="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 BIN_DIR="$CWD/node_modules/.bin"
 LERNA="$BIN_DIR/lerna"
-VERSION=`cat $CWD/package.json | python -c "import json,sys;obj=json.load(sys.stdin);print(obj['version']);"`
-
 
 # Runs script but quits if script exists with non-zero exit code
 function run_script() {
@@ -15,9 +13,7 @@ function run_script() {
   fi
 }
 
-exit 1
-
 run_script $LERNA run clean
 run_script npm install
 run_script npm run build
-run_script $LERNA publish $bump --yes
+run_script $LERNA publish from-git --yes

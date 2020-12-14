@@ -8,8 +8,9 @@ before_deploy:
   - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" >> $HOME/.npmrc 2> /dev/null
 deploy:
   provider: script
-  script: "npm run publish"
+  script: "npm run publish:public"
   skip_cleanup: true
   on:
     tags: true
+    branch: main
     repo: ktalebian/travis-play
