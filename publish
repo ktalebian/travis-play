@@ -13,6 +13,8 @@ function run_script() {
   fi
 }
 
+echo "//registry.npmjs.org/:email=\${NPM_EMAIL}" >> $HOME/.npmrc 2> /dev/null
+echo "//registry.npmjs.org/:username=\${NPM_USERNAME}" >> $HOME/.npmrc 2> /dev/null
 echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" >> $HOME/.npmrc 2> /dev/null
 npm whoami
 ls -al .
