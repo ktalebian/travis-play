@@ -20,7 +20,7 @@
     "prebuild": "rm -rf dist",
     "build": "tsc",
     "test": "echo 'no test'",
-    "release": "release-it"
+    "release": "release-it -c .releaseitrc"
   },
   "devDependencies": {
     "@types/node": "^14.14.13",
