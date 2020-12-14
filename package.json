@@ -20,7 +20,8 @@
     "bootstrap": "lerna bootstrap --no-ci",
     "build": "lerna run build",
     "postinstall": "npm run bootstrap",
-    "release": "release-it -c .releaseitrc",
+    "release": "release-it -c releaseit.json",
+    "publish": "./publish",
     "test": "echo 'no test'"
   },
   "devDependencies": {

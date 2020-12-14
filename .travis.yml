@@ -4,10 +4,11 @@ node_js:
 before_script:
   - npm install
 cache: npm
+before_deploy:
+  - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" >> $HOME/.npmrc 2> /dev/null
 deploy:
-  provider: npm
-  email: "$NPM_EMAIL"
-  api_key: "$NPM_TOKEN"
+  provider: script
+  script: "npm run publish"
   skip_cleanup: true
   on:
     tags: true
