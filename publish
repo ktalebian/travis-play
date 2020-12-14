@@ -22,6 +22,7 @@ echo "lsing home"
 ls -al $HOME
 echo "printing whoami"
 npm whoami
+echo $PWD
 echo "printing ls"
 ls -al .
 run_script $LERNA run clean
