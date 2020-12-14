@@ -14,3 +14,5 @@ deploy:
     tags: true
     branch: main
     repo: ktalebian/travis-play
+branches:
+  - main
