@@ -14,6 +14,7 @@ function run_script() {
 }
 
 
+npm config set access public
 npm config set registry https://registry.npmjs.org
 npm set //registry.npmjs.org/:_authToken "$NPM_TOKEN"
 
