@@ -3,6 +3,7 @@
 CWD="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 BIN_DIR="$CWD/node_modules/.bin"
 LERNA="$BIN_DIR/lerna"
+VERSION=`cat $CWD/package.json | python -c "import json,sys;obj=json.load(sys.stdin);print(obj['version']);"`
 
 
 # Runs script but quits if script exists with non-zero exit code

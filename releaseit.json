@@ -9,10 +9,11 @@
   "hooks": {
     "after:bump": "npx auto-changelog -p"
   },
+  "pkgFiles": null,
   "plugins": {
     "release-it-lerna-changelog": {
       "infile": "CHANGELOG.md",
-      "launchEditor": true
+      "launchEditor": false
     }
   }
 }
