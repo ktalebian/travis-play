@@ -1,6 +1,6 @@
 {
   "name": "@k88/travis-play-package-one",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "Travis Lerna package one play",
   "keywords": [],
   "license": "MIT",
@@ -14,6 +14,5 @@
     "prebuild": "npm run clean",
     "build": "tsc",
     "clean": "rm -rf dist"
-  },
-  "dependencies": {}
+  }
 }
