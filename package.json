@@ -21,8 +21,8 @@
     "build": "lerna run build",
     "postinstall": "npm run bootstrap",
     "test": "echo 'no test'",
-    "r": "lerna-release public minor",
-    "p": "lerna-publish public minor"
+    "r": "lerna-release public major",
+    "p": "lerna-publish"
   },
   "devDependencies": {
     "@k88/lerna-it": "1.0.0",
