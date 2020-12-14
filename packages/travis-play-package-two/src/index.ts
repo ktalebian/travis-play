@@ -1,6 +1,6 @@
 export default function() {
     return {
-        name: 'two-b',
+        name: 'two-c',
         env: process.env,
         new: 'false',
     }
