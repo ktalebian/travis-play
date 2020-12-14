@@ -20,7 +20,7 @@
     "bootstrap": "lerna bootstrap --no-ci",
     "build": "lerna run build",
     "postinstall": "npm run bootstrap",
-    "release": "release-it -c releaseit.json",
+    "release": "./release",
     "publish": "./publish",
     "test": "echo 'no test'"
   },
