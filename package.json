@@ -1,6 +1,5 @@
 {
   "name": "travis-play",
-  "version": "1.5.0",
   "private": true,
   "description": "playing with travis",
   "homepage": "https://github.com/ktalebian/travis-play#readme",
