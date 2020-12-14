@@ -1,0 +1,19 @@
+{
+    "name": "@k88/travis-play-package-two",
+    "version": "1.0.0",
+    "description": "Travis Lerna package one play",
+    "keywords": [],
+    "license": "MIT",
+    "author": "Kousha Talebian <ktalebian@twilio.com>",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "files": [
+      "dist"
+    ],
+    "scripts": {
+      "prebuild": "npm run clean",
+      "build": "tsc",
+      "clean": "rm -rf dist"
+    },
+    "dependencies": {}
+  }
