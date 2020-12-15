@@ -8,7 +8,7 @@ node_js:
   - 'lts/*'
 
 before_script:
-  - npm install
+  - npm install --no-package-lock
   - NODE_OPTIONS="--max-old-space-size=8192"
 
 script:
