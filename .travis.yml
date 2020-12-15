@@ -7,6 +7,11 @@ node_js:
   - 'node'
   - 'lts/*'
 
+notifications:
+  slack:
+    rooms:
+      - secure: "$SLACK_TOKEN"
+
 before_script:
   - npm install --no-package-lock
   - NODE_OPTIONS="--max-old-space-size=8192"
