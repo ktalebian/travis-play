@@ -22,7 +22,7 @@
     "build": "lerna run build",
     "postinstall": "npm run bootstrap",
     "lint": "echo 'no test'",
-    "publish": "./bin/publish",
+    "publish": "lerna-travis-publish",
     "release:alpha": "lerna-travis-release alpha",
     "release:beta": "lerna-travis-release beta",
     "release:public": "lerna-travis-release public",
