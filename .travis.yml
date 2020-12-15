@@ -32,7 +32,6 @@ deploy:
     tags: true
     branch: main
     repo: ktalebian/travis-play
-    node_js: '10'
 
 branches:
   only:
