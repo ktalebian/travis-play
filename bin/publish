@@ -1,0 +1,13 @@
+#!/bin/bash
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+SCRIPT="$DIR/../node_modules/.bin/lerna-travis-publish"
+
+targetVersion=$(npm info node version | cut -d. -f-1);
+if [ "$targetVersion" != "10" ] ; then
+  echo "Skipping publish as $targetVersion is not v10"
+  exit 0
+fi
+
+bash -c $DIR/../node_modules/.bin/lerna-travis-publish
+
