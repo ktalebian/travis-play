@@ -11,7 +11,7 @@ node_js:
 
 notifications:
   slack:
-    secure: $SLACK_TOKEN
+    secure: "$SLACK_TOKEN"
 
 before_script:
   - npm install --no-package-lock
