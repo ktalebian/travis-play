@@ -1,5 +1,6 @@
 {
   "name": "travis-play",
+  "version": "1.10.14",
   "private": true,
   "description": "playing with travis",
   "homepage": "https://github.com/ktalebian/travis-play#readme",
@@ -20,19 +21,17 @@
     "bootstrap": "lerna bootstrap --no-ci",
     "build": "lerna run build",
     "postinstall": "npm run bootstrap",
-    "test": "echo 'no test'",
     "lint": "echo 'no test'",
-    "r": "lerna-release public patch",
-    "p": "lerna-publish"
+    "publish": "lerna-travis-publish",
+    "release:alpha": "lerna-travis-release alpha",
+    "release:beta": "lerna-travis-release beta",
+    "release:public": "lerna-travis-release public",
+    "test": "echo 'no test'"
   },
   "devDependencies": {
-    "@k88/lerna-it": "1.0.0",
-    "@release-it/bumper": "^2.0.0",
+    "@k88/lerna-travis": "1.0.0",
     "@types/node": "^14.14.13",
     "lerna": "^3.22.1",
-    "release-it": "^14.2.2",
-    "release-it-lerna-changelog": "^3.1.0",
     "typescript": "^4.1.3"
-  },
-  "version": "1.10.14"
+  }
 }

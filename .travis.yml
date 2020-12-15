@@ -1,19 +1,40 @@
 language: node_js
+
 node_js:
-- 14
+  - '14'
+  - '12'
+  - '10'
+  - 'node'
+  - 'lts/*'
+
 before_script:
-  - npm install --no-package-lock
-cache: npm
+  - npm install
+  - NODE_OPTIONS="--max-old-space-size=8192"
+
+script:
+  - npm run lint
+  - CI= npm run test:ci
+  - npm run build
+
+after_success:
+  - codecov --token="$CODECOV_TOKEN"
+
 before_deploy:
-  - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" >> $HOME/.npmrc 2> /dev/null
+  - npm config set access public
+  - npm config set registry https://registry.npmjs.org
+  - npm set //registry.npmjs.org/:_authToken "$NPM_TOKEN"
+
 deploy:
   provider: script
-  script: "npm run p"
+  script: "npm run publish"
   skip_cleanup: true
   on:
     tags: true
     branch: main
     repo: ktalebian/travis-play
+
 branches:
+  only:
   - main
+  - /v\d-beta/
   - /^v\d+\.\d+\.\d+.*$/
