@@ -1,46 +1,38 @@
 os: linux
-
 language: node_js
-
 node_js:
-  - '14'
-  - '12'
-  - '10'
-  - 'node'
-  - 'lts/*'
-
-notifications:
-  slack:
-    secure: "$SLACK_TOKEN"
-
+- '14'
+- '12'
+- '10'
+- node
+- lts/*
 before_script:
-  - npm install --no-package-lock
-  - NODE_OPTIONS="--max-old-space-size=8192"
-
+- npm install --no-package-lock
+- NODE_OPTIONS="--max-old-space-size=8192"
 script:
-  - npm run lint
-  - npm run test
-  - npm run build
-
+- npm run lint
+- npm run test
+- npm run build
 after_success:
-  - codecov --token="$CODECOV_TOKEN"
-
+- codecov --token="$CODECOV_TOKEN"
 before_deploy:
-  - npm config set access public
-  - npm config set registry https://registry.npmjs.org
-  - npm set //registry.npmjs.org/:_authToken "$NPM_TOKEN"
-
+- npm config set access public
+- npm config set registry https://registry.npmjs.org
+- npm set //registry.npmjs.org/:_authToken "$NPM_TOKEN"
 deploy:
   provider: script
-  script: "npm run publish"
+  script: npm run publish
   skip_cleanup: true
   on:
     tags: true
     branch: main
     repo: ktalebian/travis-play
-
 branches:
   only:
   - main
-  - /v\d-beta/
-  - /^v\d+\.\d+\.\d+.*$/
+  - "/v\\d-beta/"
+  - "/^v\\d+\\.\\d+\\.\\d+.*$/"
+notifications:
+  slack:
+    rooms:
+      secure: neEAQMR5WR4+rEL70ToM7yVtwOgrukEIYtM0R+EM69xvA3BBswdulUzbdANHXQDqW5V4tuuHUV+l7MO8/Emnkq8lEqkuf8t10MNndPng2rwEh2iiIVm2ko30b2S5x8E7j2fLkZEpi54rCVZg8YsoEuXRcYjlralda3LbsWiVTU4b7LgukdroClnhChSQsn34YLtgj2ni2jshw8t8fXxKcm/ozJbP7HYHEwC602IFW9RL65W/oYnYYnVA8pRRLrBCXmtN2QDcAkf3hew/FTMnN395z8tprEKipxeIIbwBPFybLadNFe+tr/s2yYDT8Ck1Ak6agUv5Fqal7Co2VWfs0sblU/+AqU4sUSAm3wG95flTaQAdzi5T+aWPBuJf5Y/NVjGXnpt6yicRCqMcGjG0dKFmzO46/+N75vhqzOUoHkLnD1/DncV+kyN7Ix7Wt/7NTkcxP0UDQLlvBbAqE261j+avVd4tCp/Y8xlfnpW8gzWCRU4CgMHivamQvV4brHRRC7WxEWJXghKHacC0VYSi7uu+ExQv9J319yVZei6M4TB4FVFmEYSoN0M0Y/dQUoujRxbgb+E39839y8k5oOxTlLZEY1g+1MnJwDTA03YsnBQLDZxh9zbnns7u0ULO7oVEWajwC7x4kOj10l7VxH8dm5AcRyN/WWW48liUwqnWXws=
