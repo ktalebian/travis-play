@@ -12,7 +12,7 @@ node_js:
 notifications:
   slack:
     rooms:
-      - "$SLACK_KEY"
+      - $SLACK_KEY
 
 before_script:
   - npm install --no-package-lock
