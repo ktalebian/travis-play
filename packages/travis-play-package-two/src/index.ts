@@ -3,5 +3,6 @@ export default function() {
         name: 'and this is released',
         env: process.env,
         new: 'false',
+        is: 'alpha'
     }
 }
