@@ -1,7 +1,7 @@
 {
   "name": "@k88/travis-play-package-one",
   "version": "3.2.0",
-  "description": "Travis Lerna package one play",
+  "description": "Travis Lerna package one play hello",
   "keywords": [],
   "license": "MIT",
   "author": "Kousha Talebian <ktalebian@twilio.com>",
