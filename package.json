@@ -23,7 +23,7 @@
     "lint": "echo 'no test'",
     "publish": "lerna-travis-publish",
     "release": "lerna version patch --yes --no-push",
-    "postrelease": "dotenv release-it --config releasei.json --ci $(git describe --tags --abbrev=0 | cut -c 2-)",
+    "postrelease": "dotenv release-it $(git describe --tags --abbrev=0 | cut -c 2-) --config releasei.json --ci",
     "release:alpha": "npm run release alpha",
     "release:beta": "npm run release beta",
     "release:public": "npm run release public",
