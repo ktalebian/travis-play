@@ -24,7 +24,7 @@
     "publish": "lerna-travis-publish",
     "release": "lerna version patch --yes --no-push",
     "foo": "$(git describe --tags --abbrev=0 | cut -c 2-)",
-    "postrelease": "dotenv release-it $(git describe --tags --abbrev=0 | cut -c 2-) --config releasei.json --ci",
+    "postrelease": "dotenv release-it $(git describe --tags --abbrev=0 | cut -c 2-) --config ./releasei.json --ci",
     "release:alpha": "npm run release alpha",
     "release:beta": "npm run release beta",
     "release:public": "npm run release public",
