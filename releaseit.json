@@ -2,14 +2,14 @@
     "git": {
         "tag": false,
         "requireCleanWorkingDir": false,
-        "changelog": "echo 'this is something'"
+        "changelog": "npx auto-changelog --stdout --commit-limit false -u --template https://raw.githubusercontent.com/cookpete/auto-changelog/master/templates/json.hbs"
     },
     "github": {
         "release": true,
         "tokenRef": "GITHUB_AUTH"
     },
     "hooks": {
-        "after:bump": "echo 'this is after'"
+        "after:bump": "npx auto-changelog -v $(git describe --tags --abbrev=0 | cut -c 2-)"
     },
     "npm": {
         "publish": false,
