@@ -1,12 +1,11 @@
 {
     "git": {
         "tag": false,
-        "requireCleanWorkingDir": false,
-        "changelog": "git log --pretty=format:'* %s (%h)' [REV_RANGE]"
+        "requireCleanWorkingDir": false
     },
     "github": {
         "release": true,
-        "releaseName": "Release %s"
+        "tokenRef": "GITHUB_AUTH"
     },
     "hooks": {
         "after:bump": "auto-changelog -p"
@@ -14,5 +13,10 @@
     "npm": {
         "publish": false,
         "ignoreVersion": true
+    },
+    "plugins": {
+        "release-it-lerna-changelog": {
+          "infile": "CHANGELOG.md"
+        }
     }
 }
