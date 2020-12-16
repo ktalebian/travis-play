@@ -22,8 +22,8 @@
     "postinstall": "npm run bootstrap",
     "lint": "echo 'no test'",
     "publish": "lerna-travis-publish",
-    "prerelease": "",
     "release": "lerna-travis-release $1",
+    "postrelease": "dotenv release-it --config releasei.json --ci $(git describe --tags --abbrev=0 | cut -c 2-)",
     "release:alpha": "npm run release alpha",
     "release:beta": "npm run release beta",
     "release:public": "npm run release public",
@@ -33,6 +33,7 @@
     "@k88/lerna-travis": "1.1.0",
     "@release-it/keep-a-changelog": "^2.2.2",
     "@types/node": "^14.14.13",
+    "dotenv-cli": "^4.0.0",
     "lerna": "^3.22.1",
     "release-it": "^14.2.2",
     "typescript": "^4.1.3"
