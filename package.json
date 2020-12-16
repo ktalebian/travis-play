@@ -22,7 +22,7 @@
     "postinstall": "npm run bootstrap",
     "lint": "echo 'no test'",
     "publish": "lerna-travis-publish",
-    "release": "lerna version major --yes --no-push",
+    "release": "lerna version minor --yes --no-push",
     "foo": "$(git describe --tags --abbrev=0 | cut -c 2-)",
     "postrelease": "dotenv release-it -- $(git describe --tags --abbrev=0 | cut -c 2-) --config ./releaseit.json --ci",
     "release:alpha": "npm run release alpha",
