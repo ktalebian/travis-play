@@ -32,7 +32,3 @@ branches:
   - main
   - "/v\\d-beta/"
   - "/^v\\d+\\.\\d+\\.\\d+.*$/"
-notifications:
-  slack:
-    rooms:
-      secure: mhH4FHOtp0V9IVLUbRnR0rLOb6rI+GRum8fHPy/hb7t8Ynjem7occq/i28cskcfOMGS90U5lex0+S5luIlKJZBMk1bSiaWKvVfAl4URf+LJIGY1Yxm8boYvZwcQ+Dg8Yh41RVWXWswAHl2xYmBBcrmrPdj9I3NakVa7UR1WqlkHrC0cdHwnyoxnsSWlr4x36+6RkFXiqUp+/cnwvC/VqqRaSKlAU1ivBAY+WkqvbBT+43lIJq9V7+Pd9crJ2lN9nGa0xTsu3go4xCfM1zY3aX/5Yv+5NVUSBy6XvdxcLPwKj4paoQAHxsfPgqv/SLRexqcRd7Z8+HgFbkJR8VC4kuH9tFcUIPX7s3ToEE30H2zsl4T1hwBF30bVIOs8wT9yuU5W7IKuxvfJo3w/EWZ2/d1CFOG9NGJRSSp9Pv3ktn7YB3w7gG38Pj8z/GzRk3UsuDDfIagMxhVnzU1QtooYPh6X+rWmcbbox6Ilb7QAMGJI2tfTm/dIFz8Obb1qjJagwSwG9/pA8I3Rzayqy/cS7S0QpdVAVPsC91ppEELUdJBL7c+5N7TD0SvxvSlCAv739+3u4/enbgqhIy9tHIJK2D3OpBXnUsBqrtzwYhf4hswqoB4zLeZJEJ0QIQwV3nW+4WFxN3AyFJxB8ZqKegUUCbFah/a4IueMjhpAQLkjv624=
