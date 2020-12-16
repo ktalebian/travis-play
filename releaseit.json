@@ -7,9 +7,6 @@
         "release": true,
         "tokenRef": "GITHUB_AUTH"
     },
-    "hooks": {
-        "after:bump": "auto-changelog -p"
-    },
     "npm": {
         "publish": false,
         "ignoreVersion": true
