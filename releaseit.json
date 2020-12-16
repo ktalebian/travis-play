@@ -1,10 +1,12 @@
 {
     "git": {
         "tag": false,
-        "requireCleanWorkingDir": false
+        "requireCleanWorkingDir": false,
+        "changelog": "git log --pretty=format:'* %s (%h)' [REV_RANGE]"
     },
     "github": {
-        "release": true
+        "release": true,
+        "releaseName": "Release %s"
     },
     "hooks": {
         "after:bump": "auto-changelog -p"
@@ -12,12 +14,5 @@
     "npm": {
         "publish": false,
         "ignoreVersion": true
-    },
-    "plugins": {
-        "@release-it/keep-a-changelog": {
-          "filename": "CHANGELOG.md",
-          "strictLatest": false,
-          "addVersionUrl": true
-        }
     }
 }
