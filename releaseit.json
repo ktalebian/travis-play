@@ -1,12 +1,12 @@
 {
     "git": {
         "tag": false,
-        "requireCleanWorkingDir": false
+        "requireCleanWorkingDir": false,
+        "changelog": "auto-changelog --unreleased-only --stdout --commit-limit false -u --template https://raw.githubusercontent.com/release-it/release-it/master/templates/changelog-compact.hbs"
     },
     "github": {
         "release": true,
-        "tokenRef": "GITHUB_AUTH",
-        "changelog": "auto-changelog --unreleased-only --stdout --commit-limit false -u --template https://raw.githubusercontent.com/release-it/release-it/master/templates/changelog-compact.hbs"
+        "tokenRef": "GITHUB_AUTH"
     },
     "hooks": {
         "after:bump": "npx auto-changelog -p"
