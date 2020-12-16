@@ -2,7 +2,7 @@
     "git": {
         "tag": false,
         "requireCleanWorkingDir": false,
-        "changelog": "npx auto-changelog --stdout --commit-limit false -u --template https://raw.githubusercontent.com/cookpete/auto-changelog/master/templates/json.hbs"
+        "changelog": "npx auto-changelog --stdout --commit-limit false -u --template https://raw.githubusercontent.com/cookpete/auto-changelog/master/templates/compact.hbs"
     },
     "github": {
         "release": true,
