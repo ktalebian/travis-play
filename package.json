@@ -24,15 +24,14 @@
     "publish": "lerna-travis-publish",
     "release": "lerna version minor --yes --no-push",
     "foo": "$(git describe --tags --abbrev=0 | cut -c 2-)",
-    "postrelease": "dotenv release-it -- $(git describe --tags --abbrev=0 | cut -c 2-) --config ./releaseit.json --ci",
+    "postrelease": "dotenv release-it -- $(git describe --tags --abbrev=0 | cut -c 2-) --ci",
     "release:alpha": "npm run release alpha",
     "release:beta": "npm run release beta",
     "release:public": "npm run release public",
     "test": "echo 'no test'"
   },
   "devDependencies": {
-    "@k88/lerna-travis": "1.1.0",
-    "@release-it/keep-a-changelog": "^2.2.2",
+    "@k88/lerna-travis": "2.0.0",
     "@types/node": "^14.14.13",
     "auto-changelog": "^2.2.1",
     "dotenv-cli": "^4.0.0",
