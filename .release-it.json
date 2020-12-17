@@ -2,7 +2,7 @@
     "git": {
         "tag": false,
         "requireCleanWorkingDir": false,
-        "changelog": "npx auto-changelog --stdout --commit-limit false -u --handlebars-setup node_modules/@k88/lerna-travis/templates/releaseItHandlerbar --template https://raw.githubusercontent.com/ktalebian/lerna-travis/main/templates/changelog.hbs"
+        "changelog": "npx auto-changelog --stdout --commit-limit false -u --handlebars-setup node_modules/@k88/lerna-travis/templates/releaseItHandlerbar.js --template https://raw.githubusercontent.com/ktalebian/lerna-travis/main/templates/changelog.hbs"
     },
     "github": {
         "release": true,

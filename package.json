@@ -32,7 +32,7 @@
     "test": "echo 'no test'"
   },
   "devDependencies": {
-    "@k88/lerna-travis": "2.0.0",
+    "@k88/lerna-travis": "2.0.1",
     "@types/node": "^14.14.13",
     "auto-changelog": "^2.2.1",
     "dotenv-cli": "^4.0.0",
