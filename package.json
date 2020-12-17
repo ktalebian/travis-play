@@ -22,12 +22,13 @@
     "postinstall": "npm run bootstrap",
     "lint": "echo 'no test'",
     "publish": "lerna-travis-publish",
-    "release": "lerna version minor --yes --no-push",
+    "relea2se": "lerna version minor --yes --no-push",
     "foo": "$(git describe --tags --abbrev=0 | cut -c 2-)",
     "postrelease": "dotenv release-it -- $(git describe --tags --abbrev=0 | cut -c 2-) --ci",
-    "release:alpha": "npm run release alpha",
-    "release:beta": "npm run release beta",
-    "release:public": "npm run release public",
+    "release": "lerna-travis-release $1 $2",
+    "release:alpha": "npm run release alpha $1",
+    "release:beta": "npm run release beta $1",
+    "release:public": "npm run release public $1",
     "test": "echo 'no test'"
   },
   "devDependencies": {
