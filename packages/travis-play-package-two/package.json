@@ -1,6 +1,6 @@
 {
   "name": "@k88/travis-play-package-two",
-  "version": "4.19.0",
+  "version": "4.19.1-alpha.0+0edd6e8",
   "description": "Travis Lerna package one play",
   "keywords": [],
   "license": "MIT",
@@ -14,5 +14,6 @@
     "prebuild": "npm run clean",
     "build": "tsc",
     "clean": "rm -rf dist"
-  }
+  },
+  "gitHead": "0edd6e810887f6f5f0d9c2b570948ead8129da26"
 }
