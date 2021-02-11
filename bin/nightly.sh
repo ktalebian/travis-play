@@ -23,7 +23,8 @@ major="${semver[0]}"
 minor="${semver[1]}"
 patch="${semver[2]}"
 id=`echo $(date '+%Y%m%d')`
-nightlyVersion="${major}.${minor}.${patch}-nightly.${id}"
+rand=$(echo $((1 + SRANDOM % 10)))
+nightlyVersion="${major}.${minor}.${patch}-nightly.${id}${rand}"
 
 # Re-build package
 npm run build

@@ -15,5 +15,9 @@
     "build": "tsc",
     "clean": "rm -rf dist"
   },
-  "gitHead": "05178e8f2f19c08b7e683d224626861189e1e335"
+  "gitHead": "05178e8f2f19c08b7e683d224626861189e1e335",
+  "devDependencies": {
+    "@types/lodash": "^4.14.168",
+    "lodash": "^4.17.20"
+  }
 }
