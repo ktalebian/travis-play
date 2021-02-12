@@ -14,7 +14,10 @@
     "prebuild": "npm run clean",
     "build": "tsc",
     "clean": "rm -rf dist",
-    "prepack": "echo '' && echo ${TRAVIS_EVENT_TYPE} && printenv"
+    "prepack": "node_modules/.bin/prepack"
   },
-  "gitHead": "f2399289553d711b380ae84bc400f4827b2c79bd"
+  "gitHead": "55f1fca976fdb4d638298b9c3968c523ea145154",
+  "dependencies": {
+    "@oclif/dev-cli": "^1.26.0"
+  }
 }

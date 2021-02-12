@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -e
+
+oclif='node_modules/.bin/oclif-dev'
+
+if [ "$TRAVIS_EVENT_TYPE" != "cron" ] ; then
+  echo "Skipping doc update on nightly build"
+  exit 0
+fi
+
+echo "running this"
+
+${oclif} manifest
+npm run replace-doc
