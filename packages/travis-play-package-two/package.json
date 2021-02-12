@@ -14,9 +14,9 @@
     "prebuild": "npm run clean",
     "build": "tsc",
     "clean": "rm -rf dist",
-    "prepack": "node_modules/.bin/prepack"
+    "prepack": "bin/prepack"
   },
-  "gitHead": "55f1fca976fdb4d638298b9c3968c523ea145154",
+  "gitHead": "eb73790aaf29df784488074a21283ba6d256158d",
   "dependencies": {
     "@oclif/dev-cli": "^1.26.0"
   }
