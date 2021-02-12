@@ -13,7 +13,8 @@
   "scripts": {
     "prebuild": "npm run clean",
     "build": "tsc",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "prepack": "echo 'hello' && echo ${TRAVIS_EVENT_TYPE}"
   },
   "gitHead": "05178e8f2f19c08b7e683d224626861189e1e335"
 }
