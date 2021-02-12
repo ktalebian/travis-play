@@ -1,6 +1,6 @@
 {
   "name": "@k88/travis-play-package-one",
-  "version": "5.0.0",
+  "version": "5.0.0-nightly.202102111",
   "description": "Travis Lerna package one play hello",
   "keywords": [],
   "license": "MIT",
@@ -15,7 +15,7 @@
     "build": "tsc",
     "clean": "rm -rf dist"
   },
-  "gitHead": "05178e8f2f19c08b7e683d224626861189e1e335",
+  "gitHead": "f2399289553d711b380ae84bc400f4827b2c79bd",
   "devDependencies": {
     "@types/lodash": "^4.14.168",
     "lodash": "^4.17.20"

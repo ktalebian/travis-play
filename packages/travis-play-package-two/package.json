@@ -1,6 +1,6 @@
 {
   "name": "@k88/travis-play-package-two",
-  "version": "5.0.0",
+  "version": "5.0.0-nightly.202102111",
   "description": "Travis Lerna package one play",
   "keywords": [],
   "license": "MIT",
@@ -14,7 +14,7 @@
     "prebuild": "npm run clean",
     "build": "tsc",
     "clean": "rm -rf dist",
-    "prepack": "echo 'hello' && echo ${TRAVIS_EVENT_TYPE}"
+    "prepack": "echo '' && echo ${TRAVIS_EVENT_TYPE} && printenv"
   },
-  "gitHead": "05178e8f2f19c08b7e683d224626861189e1e335"
+  "gitHead": "f2399289553d711b380ae84bc400f4827b2c79bd"
 }
