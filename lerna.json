@@ -2,5 +2,5 @@
   "packages": [
     "packages/*"
   ],
-  "version": "5.0.0-nightly.202102111"
+  "version": "5.0.0-beta.0"
 }
