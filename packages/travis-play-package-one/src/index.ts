@@ -2,6 +2,6 @@ export default function() {
     return {
         name: 'this is F',
         env: process.env,
-        field: true
+        field: false,
     }
 }
