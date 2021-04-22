@@ -1,6 +1,6 @@
 {
   "name": "@k88/travis-play-package-one",
-  "version": "5.1.0-beta.0",
+  "version": "5.2.0-beta.0",
   "description": "Travis Lerna package one play hello",
   "keywords": [],
   "license": "MIT",
