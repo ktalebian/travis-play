@@ -1,6 +1,6 @@
 {
   "name": "@k88/travis-play-package-two",
-  "version": "5.2.0-beta.0",
+  "version": "6.0.0",
   "description": "Travis Lerna package one play",
   "keywords": [],
   "license": "MIT",
@@ -18,7 +18,7 @@
   },
   "gitHead": "eb73790aaf29df784488074a21283ba6d256158d",
   "dependencies": {
-    "@k88/travis-play-package-one": "5.2.0-beta.0",
+    "@k88/travis-play-package-one": "6.0.0",
     "@oclif/dev-cli": "^1.26.0"
   }
 }
