@@ -28,7 +28,7 @@ body:
 - type: input
   id: version-flex-plugin-scripts
   attributes:
-    label: `flex-plugin-scripts` Version
+    label: flex-plugin-scripts Version
     description: What version of flex-plugin-scripts are you using?
   validations:
     required: true
@@ -42,14 +42,14 @@ body:
 - type: input
   id: version-node
   attributes:
-    label: `node` Version
+    label: node Version
     description: What version of `node` are you using?
   validations:
     required: true
 - type: input
   id: version-npm
   attributes:
-    label: `npm` Version
+    label: npm Version
     description: What version of `npm` are you using?
   validations:
     required: true
