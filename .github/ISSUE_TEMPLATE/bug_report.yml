@@ -37,40 +37,40 @@ body:
   id: version-flex-ui
   attributes:
     label: flex-ui Version
-    description: What version of `@twilio/flex-ui` are you using?
-    placeholder: grep version node_modules/@twilio/flex-ui/package.json
+    description: What version of `@twilio/flex-ui` are you using? Use `grep version node_modules/@twilio/flex-ui/package.json`
+    placeholder: 1.27.0
   validations:
     required: true
 - type: input
   id: version-flex-plugin-scripts
   attributes:
     label: flex-plugin-scripts Version
-    description: What version of `flex-plugin-scripts` are you using?
-    placeholder: grep version node_modules/flex-plugin-scripts/package.json
+    description: What version of `flex-plugin-scripts` are you using? Use `grep version node_modules/flex-plugin-scripts/package.json`
+    placeholder: 4.0.1
   validations:
     required: true
 - type: input
   id: version-plugins-cli
   attributes:
     label: \@twilio-labs/plugin-flex Version
-    description: What version of `@twilio-labs/plugin-flex` are you using?
-    placeholder: twilio plugins
+    description: What version of `@twilio-labs/plugin-flex` are you using? Use `twilio plugins`
+    placeholder: 4.0.1
   validations:
     required: true
 - type: input
   id: version-node
   attributes:
     label: node Version
-    description: What version of `node` are you using?
-    placeholder: node -v
+    description: What version of `node` are you using? Use `node -v`
+    placeholder: 12.14.3
   validations:
     required: true
 - type: input
   id: version-npm
   attributes:
     label: npm Version
-    description: What version of `npm` are you using?
-    placeholder: npm -v
+    description: What version of `npm` are you using? Use `npm -v`
+    placeholder: 7.5.3
   validations:
     required: true
 - type: dropdown
