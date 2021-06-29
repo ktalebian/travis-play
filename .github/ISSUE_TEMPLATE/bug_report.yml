@@ -5,15 +5,11 @@ labels: [bug, triage]
 assignees:
 - ktalebian
 body:
-- type: markdown
-  attributes:
-    value: |
-      Thanks for taking the time to fill out this bug report!
 - type: input
   id: summary
   attributes:
     label: Summary
-    description: A clear and concise description of what the bug is, including steps on how to reproduce it.
+    description: A clear and concise description of what the bug is.
     placeholder: The command `twilio flex:plugins:deploy` fails.
   validations:
     required: false
@@ -21,7 +17,7 @@ body:
   id: description
   attributes:
     label: Detailed Description
-    description: A clear and concise description of what the bug is.
+    description: A clear and concise description of what the bug is, including steps on how to reproduce it.
     placeholder: |
       Cannot deploy plugin because of version mismatch. I tried to first 
       
@@ -29,11 +25,25 @@ body:
       2. Run `twilio flex:plugins:deploy`
   validations:
     required: true
+- type: textarea
+  id: log
+  attributes:
+    label: Log output
+    description: Please paste any log output you are running. Include `-l debug` when using the CLI command.
+  validations:
+    required: false
+- type: input
+  id: version-flex-ui
+  attributes:
+    label: flex-ui Version
+    description: What version of `@twilio/flex-ui` are you using?
+  validations:
+    required: true
 - type: input
   id: version-flex-plugin-scripts
   attributes:
     label: flex-plugin-scripts Version
-    description: What version of flex-plugin-scripts are you using?
+    description: What version of `flex-plugin-scripts` are you using?
   validations:
     required: true
 - type: input
