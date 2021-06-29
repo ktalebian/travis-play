@@ -19,7 +19,7 @@ body:
     label: Detailed Description
     description: A clear and concise description of what the bug is, including steps on how to reproduce it.
     placeholder: |
-      Cannot deploy plugin because of version mismatch. I tried to first 
+      Cannot deploy plugin because of version mismatch. I tried to first to:
       
       1. Run `npm install`
       2. Run `twilio flex:plugins:deploy`
@@ -36,8 +36,8 @@ body:
 - type: input
   id: version-flex-ui
   attributes:
-    label: flex-ui Version
-    description: What version of `@twilio/flex-ui` are you using? Use `grep version node_modules/@twilio/flex-ui/package.json`
+    label: flex-ui Version 🤣 
+    description: What version of `@twilio/flex-ui` are you using? Use `grep version node_modules/@twilio/flex-ui/package.json`. ✂ 🤣 
     placeholder: 1.27.0
   validations:
     required: true
@@ -45,7 +45,7 @@ body:
   id: version-flex-plugin-scripts
   attributes:
     label: flex-plugin-scripts Version
-    description: What version of `flex-plugin-scripts` are you using? Use `grep version node_modules/flex-plugin-scripts/package.json`
+    description: What version of `flex-plugin-scripts` are you using? Use `grep version node_modules/flex-plugin-scripts/package.json`.
     placeholder: 4.0.1
   validations:
     required: true
@@ -53,7 +53,7 @@ body:
   id: version-plugins-cli
   attributes:
     label: \@twilio-labs/plugin-flex Version
-    description: What version of `@twilio-labs/plugin-flex` are you using? Use `twilio plugins`
+    description: What version of `@twilio-labs/plugin-flex` are you using? Use `twilio plugins`.
     placeholder: 4.0.1
   validations:
     required: true
