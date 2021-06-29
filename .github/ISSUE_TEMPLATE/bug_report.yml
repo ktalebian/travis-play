@@ -43,14 +43,14 @@ body:
   id: version-node
   attributes:
     label: node Version
-    description: What version of node are you using?
+    description: What version of `node` are you using?
   validations:
     required: true
 - type: input
   id: version-npm
   attributes:
     label: npm Version
-    description: What version of npm are you using?
+    description: What version of `npm` are you using?
   validations:
     required: true
 - type: dropdown
