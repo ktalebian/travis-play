@@ -38,6 +38,7 @@ body:
   attributes:
     label: flex-ui Version
     description: What version of `@twilio/flex-ui` are you using?
+    placeholder: grep version node_modules/@twilio/flex-ui/package.json
   validations:
     required: true
 - type: input
@@ -45,6 +46,7 @@ body:
   attributes:
     label: flex-plugin-scripts Version
     description: What version of `flex-plugin-scripts` are you using?
+    placeholder: grep version node_modules/flex-plugin-scripts/package.json
   validations:
     required: true
 - type: input
@@ -52,6 +54,7 @@ body:
   attributes:
     label: \@twilio-labs/plugin-flex Version
     description: What version of `@twilio-labs/plugin-flex` are you using?
+    placeholder: twilio plugins
   validations:
     required: true
 - type: input
@@ -67,6 +70,7 @@ body:
   attributes:
     label: npm Version
     description: What version of `npm` are you using?
+    placeholder: npm -v
   validations:
     required: true
 - type: dropdown
