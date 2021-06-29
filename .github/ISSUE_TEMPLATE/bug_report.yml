@@ -37,7 +37,6 @@ body:
   attributes:
     label: plugin-flex Version
     description: What version of plugin-flex are you using?
-    options:
   validations:
     required: true
 - type: input
@@ -45,7 +44,6 @@ body:
   attributes:
     label: node Version
     description: What version of node are you using?
-    options:
   validations:
     required: true
 - type: input
@@ -53,7 +51,6 @@ body:
   attributes:
     label: npm Version
     description: What version of npm are you using?
-    options:
   validations:
     required: true
 - type: dropdown
