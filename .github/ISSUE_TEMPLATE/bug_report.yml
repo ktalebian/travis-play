@@ -9,13 +9,13 @@ body:
   attributes:
     value: |
       Thanks for taking the time to fill out this bug report!
-      This is something
 - type: input
   id: summary
   attributes:
     label: Summary
     description: A clear and concise description of what the bug is, including steps on how to reproduce it.
-    placeholder: |
+    placeholder: Cannot deploy plugin because of version mismatch.
+    value: |
       Cannot deploy plugin because of version mismatch. I tried to first 
       1. Run `npm install`
       2. Run `twilio flex:plugins:deploy`
