@@ -13,8 +13,11 @@ body:
   id: summary
   attributes:
     label: Summary
-    description: A clear and concise description of what the bug is.
-    placeholder: Cannot deploy plugin because of version mismatch.
+    description: A clear and concise description of what the bug is, including steps on how to reproduce it.
+    placeholder: |
+      Cannot deploy plugin because of version mismatch. I tried to first 
+      1. Run `npm install`
+      2. Run `twilio flex:plugins:deploy`
   validations:
     required: false
 - type: textarea
