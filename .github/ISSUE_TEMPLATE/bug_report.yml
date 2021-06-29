@@ -71,7 +71,7 @@ body:
 - type: textarea
   id: package
   attributes:
-    label: package
+    label: Your package.json Content
     description: Please include the entire content of your `package.json`.
     render: json
 - type: checkboxes
