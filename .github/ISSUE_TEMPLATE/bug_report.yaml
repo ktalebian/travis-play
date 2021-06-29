@@ -1,0 +1,83 @@
+name: Bug Report
+description: File a bug report
+title: "[Bug]: "
+labels: [bug, triage]
+assignees:
+  - ktalebian
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: input
+    id: description
+    attributes:
+      label: Summary
+      description: A clear and concise description of what the bug is.
+      placeholder: Cannot deploy plugin because of version mismatch.
+    validations:
+      required: false
+  - type: textarea
+    id: description
+    attributes:
+      label: Detailed Description
+      description: A clear and concise description of what the bug is.
+      placeholder: When running `twilio flex:plugins:deploy`, I get the following error: ...
+    validations:
+      required: true
+  - type: input
+    id: version-flex-plugin-scripts
+    attributes:
+      label: flex-plugin-scripts Version
+      description: What version of flex-plugin-scripts are you using?
+    validations:
+      required: true
+ - type: input
+    id: version-plugins-cli
+    attributes:
+      label: @twilio-labs/plugin-flex Version
+      description: What version of @twilio-labs/plugin-flex are you using?
+      options:
+    validations:
+      required: true
+  - type: input
+    id: version-node
+    attributes:
+      label: node Version
+      description: What version of node are you using?
+      options:
+    validations:
+      required: true
+  - type: input
+    id: version-npm
+    attributes:
+      label: npm Version
+      description: What version of npm are you using?
+      options:
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: OS
+      description: What OS are you using?
+      options:
+        - Mac (Default)
+        - Window
+        - Linux
+    validations:
+      required: true
+  - type: textarea
+    id: package
+    attributes:
+      label: package
+      description: Please include the entire content of your `package.json`.
+      render: json
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
