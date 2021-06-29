@@ -22,7 +22,7 @@ body:
     attributes:
       label: Detailed Description
       description: A clear and concise description of what the bug is.
-      placeholder: When running twilio flex:plugins:deploy, I get the following error: ...
+      placeholder: When running twilio `flex:plugins:deploy`, I get the following error
     validations:
       required: true
   - type: input
