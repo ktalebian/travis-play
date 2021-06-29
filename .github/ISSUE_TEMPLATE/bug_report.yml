@@ -59,6 +59,7 @@ body:
   attributes:
     label: node Version
     description: What version of `node` are you using?
+    placeholder: node -v
   validations:
     required: true
 - type: input
@@ -85,11 +86,3 @@ body:
     label: Your package.json Content
     description: Please include the entire content of your `package.json`.
     render: json
-- type: checkboxes
-  id: terms
-  attributes:
-    label: Code of Conduct
-    description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
-    options:
-      - label: I agree to follow this project's Code of Conduct
-        required: true
