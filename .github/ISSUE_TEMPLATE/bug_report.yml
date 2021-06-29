@@ -30,6 +30,7 @@ body:
   attributes:
     label: Log output
     description: Please paste any log output you are running. Include `-l debug` when using the CLI command.
+    render: text
   validations:
     required: false
 - type: input
