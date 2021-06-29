@@ -87,6 +87,6 @@ body:
 - type: textarea
   id: package
   attributes:
-    label: Your package.json Content
+    label: package.json Content
     description: Please include the entire content of your `package.json`.
     render: json
