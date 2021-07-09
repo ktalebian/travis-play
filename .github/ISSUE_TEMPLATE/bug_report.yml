@@ -60,7 +60,7 @@ body:
 - type: input
   id: version-node
   attributes:
-    label: node Version
+    label: node Version @foo
     description: What version of `node` are you using? Use `node -v`
     placeholder: 12.14.3
   validations:
