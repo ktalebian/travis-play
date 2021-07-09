@@ -36,8 +36,8 @@ body:
 - type: input
   id: version-flex-ui
   attributes:
-    label: flex-ui Version 🤣 
-    description: What version of `@twilio/flex-ui` are you using? Use `grep version node_modules/@twilio/flex-ui/package.json`. ✂ 🤣 
+    label: flex-ui Version
+    description: What version of `@twilio/flex-ui` are you using? Use `grep version node_modules/@twilio/flex-ui/package.json`.
     placeholder: 1.27.0
   validations:
     required: true
@@ -52,7 +52,7 @@ body:
 - type: input
   id: version-plugins-cli
   attributes:
-    label: \@twilio-labs/plugin-flex Version
+    label: @twilio-labs/plugin-flex Version
     description: What version of `@twilio-labs/plugin-flex` are you using? Use `twilio plugins`.
     placeholder: 4.0.1
   validations:
